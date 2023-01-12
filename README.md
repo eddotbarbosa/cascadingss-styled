@@ -1,6 +1,6 @@
 # Cascadingss Styled
 
-A grid system based on flexbox maded with styled components and typescript.
+A grid system based on flexbox made with styled components and typescript.
 
 ## Related Repositories
 [Cascadingss](https://github.com/eddotbarbosa/cascadingss)
