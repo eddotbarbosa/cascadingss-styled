@@ -10,21 +10,6 @@ const spacing = {
   '2xl': '48px'
 };
 
-const columns = {
-  'column-1': '8.333333%',
-  'column-2': '16.666667%',
-  'column-3': '25%',
-  'column-4': '33.333333%',
-  'column-5': '41.666667%',
-  'column-6': '50%',
-  'column-7': '58.333333%',
-  'column-8': '66.666667%',
-  'column-9': '75%',
-  'column-10': '83.333333%',
-  'column-11': '91.666667%',
-  'column-12': '100%'
-};
-
 const mobileFirstBreakpoints = {
   'sm': '640px',
   'md': '768px',
@@ -41,21 +26,72 @@ const desktopFirstBreakpoints = {
   'xs': '576px'
 };
 
-export type ColOptions = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
+const widths = {
+  'width-1': '8.333333%',
+  'width-2': '16.666667%',
+  'width-3': '25%',
+  'width-4': '33.333333%',
+  'width-5': '41.666667%',
+  'width-6': '50%',
+  'width-7': '58.333333%',
+  'width-8': '66.666667%',
+  'width-9': '75%',
+  'width-10': '83.333333%',
+  'width-11': '91.666667%',
+  'width-12': '100%',
+  'screen': '100vw'
+};
 
-const col = {
-  '1': columns["column-1"],
-  '2': columns["column-2"],
-  '3': columns["column-3"],
-  '4': columns["column-4"],
-  '5': columns["column-5"],
-  '6': columns["column-6"],
-  '7': columns["column-7"],
-  '8': columns["column-8"],
-  '9': columns["column-9"],
-  '10': columns["column-10"],
-  '11': columns["column-11"],
-  '12': columns["column-12"]
+export type WidthOptions = '1/12' | '2/12' | '3/12' | '4/12' | '5/12' | '6/12' | '7/12' | '8/12' | '9/12' | '10/12' | '11/12' | '12/12' | 'screen';
+
+const w = {
+  '1/12': widths["width-1"],
+  '2/12': widths["width-2"],
+  '3/12': widths["width-3"],
+  '4/12': widths["width-4"],
+  '5/12': widths["width-5"],
+  '6/12': widths["width-6"],
+  '7/12': widths["width-7"],
+  '8/12': widths["width-8"],
+  '9/12': widths["width-9"],
+  '10/12': widths["width-10"],
+  '11/12': widths["width-11"],
+  '12/12': widths["width-12"],
+  'screen': widths["screen"]
+};
+
+const heights = {
+  'height-1': '8.333333%',
+  'height-2': '16.666667%',
+  'height-3': '25%',
+  'height-4': '33.333333%',
+  'height-5': '41.666667%',
+  'height-6': '50%',
+  'height-7': '58.333333%',
+  'height-8': '66.666667%',
+  'height-9': '75%',
+  'height-10': '83.333333%',
+  'height-11': '91.666667%',
+  'height-12': '100%',
+  'screen': '100vh'
+};
+
+export type HeightOptions = '1/12' | '2/12' | '3/12' | '4/12' | '5/12' | '6/12' | '7/12' | '8/12' | '9/12' | '10/12' | '11/12' | '12/12' | 'screen';
+
+const h = {
+  '1/12': heights["height-1"],
+  '2/12': heights["height-2"],
+  '3/12': heights["height-3"],
+  '4/12': heights["height-4"],
+  '5/12': heights["height-5"],
+  '6/12': heights["height-6"],
+  '7/12': heights["height-7"],
+  '8/12': heights["height-8"],
+  '9/12': heights["height-9"],
+  '10/12': heights["height-10"],
+  '11/12': heights["height-11"],
+  '12/12': heights["height-12"],
+  'screen': heights["screen"]
 };
 
 export type DisplayOptions =
@@ -254,8 +290,8 @@ const alignSelf = {
 
 export {
   spacing,
-  columns,
-  col,
+  w,
+  h,
   display,
   visibility,
   flexDirection,

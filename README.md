@@ -186,7 +186,10 @@ declare module 'styled-components' {
 ## Props List:
 | prop | option | properties |
 |-------|------------|------------|
-| col | 1~12 | width: 8.333333%~100%;|
+| w | 1/12~12/12 | width: 8.333333%~100%;|
+| w | screen | width: 100vw;|
+| h | 1/12~12/12 | height: 8.333333%~100%;|
+| h | screen | height: 100vh;|
 | display | block | display: block; |
 | display | inline-block | display: inline-block;|
 | display | inline | display: inline;|

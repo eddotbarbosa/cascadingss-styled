@@ -1,7 +1,8 @@
 import styled, {css, DefaultTheme} from 'styled-components';
 import {
   spacing,
-  col,
+  w,
+  h,
   display,
   visibility,
   flexDirection,
@@ -15,7 +16,8 @@ import {
   alignItems,
   alignSelf,
   SpacingOptions,
-  ColOptions,
+  WidthOptions,
+  HeightOptions,
   JustifyContentOptions,
   DisplayOptions,
   VisibilityOptions,
@@ -33,165 +35,173 @@ import {
 } from '../../styles/layout';
 
 interface CascadingssProps {
-  theme?: DefaultTheme,
-  children?: React.ReactNode,
-  col?: ColOptions,
-  display?: DisplayOptions,
-  visibility?: VisibilityOptions,
-  flexDirection?: FlexDirectionOptions,
-  flexWrap?: FlexWrapOptions,
-  flex?: FlexOptions,
-  flexGrow?: FlexGrowOptions,
-  flexShrink?: FlexShrinkOptions,
-  order?: OrderOptions,
-  justifyContent?: JustifyContentOptions,
-  alignContent?: AlignContentOptions,
-  alignItems?: AlignItemsOptions,
-  alignSelf?: AlignSelfOptions,
-  mt?: SpacingOptions,
-  mr?: SpacingOptions,
-  mb?: SpacingOptions,
-  ml?: SpacingOptions,
-  pt?: SpacingOptions,
-  pr?: SpacingOptions,
-  pb?: SpacingOptions,
-  pl?: SpacingOptions,
+  theme?: DefaultTheme;
+  children?: React.ReactNode;
+  w?: WidthOptions;
+  h?: HeightOptions;
+  display?: DisplayOptions;
+  visibility?: VisibilityOptions;
+  flexDirection?: FlexDirectionOptions;
+  flexWrap?: FlexWrapOptions;
+  flex?: FlexOptions;
+  flexGrow?: FlexGrowOptions;
+  flexShrink?: FlexShrinkOptions;
+  order?: OrderOptions;
+  justifyContent?: JustifyContentOptions;
+  alignContent?: AlignContentOptions;
+  alignItems?: AlignItemsOptions;
+  alignSelf?: AlignSelfOptions;
+  mt?: SpacingOptions;
+  mr?: SpacingOptions;
+  mb?: SpacingOptions;
+  ml?: SpacingOptions;
+  pt?: SpacingOptions;
+  pr?: SpacingOptions;
+  pb?: SpacingOptions;
+  pl?: SpacingOptions;
 
-  col2xl?: ColOptions,
-  display2xl?: DisplayOptions,
-  visibility2xl?: VisibilityOptions,
-  flexDirection2xl?: FlexDirectionOptions,
-  flexWrap2xl?: FlexWrapOptions,
-  flex2xl?: FlexOptions,
-  flexGrow2xl?: FlexGrowOptions,
-  flexShrink2xl?: FlexShrinkOptions,
-  order2xl?: OrderOptions,
-  justifyContent2xl?: JustifyContentOptions,
-  alignContent2xl?: AlignContentOptions,
-  alignItems2xl?: AlignItemsOptions,
-  alignSelf2xl?: AlignSelfOptions,
-  mt2xl?: SpacingOptions,
-  mr2xl?: SpacingOptions,
-  mb2xl?: SpacingOptions,
-  ml2xl?: SpacingOptions,
-  pt2xl?: SpacingOptions,
-  pr2xl?: SpacingOptions,
-  pb2xl?: SpacingOptions,
-  pl2xl?: SpacingOptions,
+  w2xl?: WidthOptions;
+  h2xl?: HeightOptions;
+  display2xl?: DisplayOptions;
+  visibility2xl?: VisibilityOptions;
+  flexDirection2xl?: FlexDirectionOptions;
+  flexWrap2xl?: FlexWrapOptions;
+  flex2xl?: FlexOptions;
+  flexGrow2xl?: FlexGrowOptions;
+  flexShrink2xl?: FlexShrinkOptions;
+  order2xl?: OrderOptions;
+  justifyContent2xl?: JustifyContentOptions;
+  alignContent2xl?: AlignContentOptions;
+  alignItems2xl?: AlignItemsOptions;
+  alignSelf2xl?: AlignSelfOptions;
+  mt2xl?: SpacingOptions;
+  mr2xl?: SpacingOptions;
+  mb2xl?: SpacingOptions;
+  ml2xl?: SpacingOptions;
+  pt2xl?: SpacingOptions;
+  pr2xl?: SpacingOptions;
+  pb2xl?: SpacingOptions;
+  pl2xl?: SpacingOptions;
 
-  colXl?: ColOptions,
-  displayXl?: DisplayOptions,
-  visibilityXl?: VisibilityOptions,
-  flexDirectionXl?: FlexDirectionOptions,
-  flexWrapXl?: FlexWrapOptions,
-  flexXl?: FlexOptions,
-  flexGrowXl?: FlexGrowOptions,
-  flexShrinkXl?: FlexShrinkOptions,
-  orderXl?: OrderOptions,
-  justifyContentXl?: JustifyContentOptions,
-  alignContentXl?: AlignContentOptions,
-  alignItemsXl?: AlignItemsOptions,
-  alignSelfXl?: AlignSelfOptions,
-  mtXl?: SpacingOptions,
-  mrXl?: SpacingOptions,
-  mbXl?: SpacingOptions,
-  mlXl?: SpacingOptions,
-  ptXl?: SpacingOptions,
-  prXl?: SpacingOptions,
-  pbXl?: SpacingOptions,
-  plXl?: SpacingOptions,
+  wXl?: WidthOptions;
+  hXl?: HeightOptions;
+  displayXl?: DisplayOptions;
+  visibilityXl?: VisibilityOptions;
+  flexDirectionXl?: FlexDirectionOptions;
+  flexWrapXl?: FlexWrapOptions;
+  flexXl?: FlexOptions;
+  flexGrowXl?: FlexGrowOptions;
+  flexShrinkXl?: FlexShrinkOptions;
+  orderXl?: OrderOptions;
+  justifyContentXl?: JustifyContentOptions;
+  alignContentXl?: AlignContentOptions;
+  alignItemsXl?: AlignItemsOptions;
+  alignSelfXl?: AlignSelfOptions;
+  mtXl?: SpacingOptions;
+  mrXl?: SpacingOptions;
+  mbXl?: SpacingOptions;
+  mlXl?: SpacingOptions;
+  ptXl?: SpacingOptions;
+  prXl?: SpacingOptions;
+  pbXl?: SpacingOptions;
+  plXl?: SpacingOptions;
 
-  colLg?: ColOptions,
-  displayLg?: DisplayOptions,
-  visibilityLg?: VisibilityOptions,
-  flexDirectionLg?: FlexDirectionOptions,
-  flexWrapLg?: FlexWrapOptions,
-  flexLg?: FlexOptions,
-  flexGrowLg?: FlexGrowOptions,
-  flexShrinkLg?: FlexShrinkOptions,
-  orderLg?: OrderOptions,
-  justifyContentLg?: JustifyContentOptions,
-  alignContentLg?: AlignContentOptions,
-  alignItemsLg?: AlignItemsOptions,
-  alignSelfLg?: AlignSelfOptions,
-  mtLg?: SpacingOptions,
-  mrLg?: SpacingOptions,
-  mbLg?: SpacingOptions,
-  mlLg?: SpacingOptions,
-  ptLg?: SpacingOptions,
-  prLg?: SpacingOptions,
-  pbLg?: SpacingOptions,
-  plLg?: SpacingOptions,
+  wLg?: WidthOptions;
+  hLg?: HeightOptions;
+  displayLg?: DisplayOptions;
+  visibilityLg?: VisibilityOptions;
+  flexDirectionLg?: FlexDirectionOptions;
+  flexWrapLg?: FlexWrapOptions;
+  flexLg?: FlexOptions;
+  flexGrowLg?: FlexGrowOptions;
+  flexShrinkLg?: FlexShrinkOptions;
+  orderLg?: OrderOptions;
+  justifyContentLg?: JustifyContentOptions;
+  alignContentLg?: AlignContentOptions;
+  alignItemsLg?: AlignItemsOptions;
+  alignSelfLg?: AlignSelfOptions;
+  mtLg?: SpacingOptions;
+  mrLg?: SpacingOptions;
+  mbLg?: SpacingOptions;
+  mlLg?: SpacingOptions;
+  ptLg?: SpacingOptions;
+  prLg?: SpacingOptions;
+  pbLg?: SpacingOptions;
+  plLg?: SpacingOptions;
 
-  colMd?: ColOptions,
-  displayMd?: DisplayOptions,
-  visibilityMd?: VisibilityOptions,
-  flexDirectionMd?: FlexDirectionOptions,
-  flexWrapMd?: FlexWrapOptions,
-  flexMd?: FlexOptions,
-  flexGrowMd?: FlexGrowOptions,
-  flexShrinkMd?: FlexShrinkOptions,
-  orderMd?: OrderOptions,
-  justifyContentMd?: JustifyContentOptions,
-  alignContentMd?: AlignContentOptions,
-  alignItemsMd?: AlignItemsOptions,
-  alignSelfMd?: AlignSelfOptions,
-  mtMd?: SpacingOptions,
-  mrMd?: SpacingOptions,
-  mbMd?: SpacingOptions,
-  mlMd?: SpacingOptions,
-  ptMd?: SpacingOptions,
-  prMd?: SpacingOptions,
-  pbMd?: SpacingOptions,
-  plMd?: SpacingOptions,
+  wMd?: WidthOptions;
+  hMd?: HeightOptions;
+  displayMd?: DisplayOptions;
+  visibilityMd?: VisibilityOptions;
+  flexDirectionMd?: FlexDirectionOptions;
+  flexWrapMd?: FlexWrapOptions;
+  flexMd?: FlexOptions;
+  flexGrowMd?: FlexGrowOptions;
+  flexShrinkMd?: FlexShrinkOptions;
+  orderMd?: OrderOptions;
+  justifyContentMd?: JustifyContentOptions;
+  alignContentMd?: AlignContentOptions;
+  alignItemsMd?: AlignItemsOptions;
+  alignSelfMd?: AlignSelfOptions;
+  mtMd?: SpacingOptions;
+  mrMd?: SpacingOptions;
+  mbMd?: SpacingOptions;
+  mlMd?: SpacingOptions;
+  ptMd?: SpacingOptions;
+  prMd?: SpacingOptions;
+  pbMd?: SpacingOptions;
+  plMd?: SpacingOptions;
 
-  colSm?: ColOptions,
-  displaySm?: DisplayOptions,
-  visibilitySm?: VisibilityOptions,
-  flexDirectionSm?: FlexDirectionOptions,
-  flexWrapSm?: FlexWrapOptions,
-  flexSm?: FlexOptions,
-  flexGrowSm?: FlexGrowOptions,
-  flexShrinkSm?: FlexShrinkOptions,
-  orderSm?: OrderOptions,
-  justifyContentSm?: JustifyContentOptions,
-  alignContentSm?: AlignContentOptions,
-  alignItemsSm?: AlignItemsOptions,
-  alignSelfSm?: AlignSelfOptions,
-  mtSm?: SpacingOptions,
-  mrSm?: SpacingOptions,
-  mbSm?: SpacingOptions,
-  mlSm?: SpacingOptions,
-  ptSm?: SpacingOptions,
-  prSm?: SpacingOptions,
-  pbSm?: SpacingOptions,
-  plSm?: SpacingOptions,
+  wSm?: WidthOptions;
+  hSm?: HeightOptions;
+  displaySm?: DisplayOptions;
+  visibilitySm?: VisibilityOptions;
+  flexDirectionSm?: FlexDirectionOptions;
+  flexWrapSm?: FlexWrapOptions;
+  flexSm?: FlexOptions;
+  flexGrowSm?: FlexGrowOptions;
+  flexShrinkSm?: FlexShrinkOptions;
+  orderSm?: OrderOptions;
+  justifyContentSm?: JustifyContentOptions;
+  alignContentSm?: AlignContentOptions;
+  alignItemsSm?: AlignItemsOptions;
+  alignSelfSm?: AlignSelfOptions;
+  mtSm?: SpacingOptions;
+  mrSm?: SpacingOptions;
+  mbSm?: SpacingOptions;
+  mlSm?: SpacingOptions;
+  ptSm?: SpacingOptions;
+  prSm?: SpacingOptions;
+  pbSm?: SpacingOptions;
+  plSm?: SpacingOptions;
 
-  colXs?: ColOptions,
-  displayXs?: DisplayOptions,
-  visibilityXs?: VisibilityOptions,
-  flexDirectionXs?: FlexDirectionOptions,
-  flexWrapXs?: FlexWrapOptions,
-  flexXs?: FlexOptions,
-  flexGrowXs?: FlexGrowOptions,
-  flexShrinkXs?: FlexShrinkOptions,
-  orderXs?: OrderOptions,
-  justifyContentXs?: JustifyContentOptions,
-  alignContentXs?: AlignContentOptions,
-  alignItemsXs?: AlignItemsOptions,
-  alignSelfXs?: AlignSelfOptions,
-  mtXs?: SpacingOptions,
-  mrXs?: SpacingOptions,
-  mbXs?: SpacingOptions,
-  mlXs?: SpacingOptions,
-  ptXs?: SpacingOptions,
-  prXs?: SpacingOptions,
-  pbXs?: SpacingOptions,
-  plXs?: SpacingOptions,
+  wXs?: WidthOptions;
+  hXs?: HeightOptions;
+  displayXs?: DisplayOptions;
+  visibilityXs?: VisibilityOptions;
+  flexDirectionXs?: FlexDirectionOptions;
+  flexWrapXs?: FlexWrapOptions;
+  flexXs?: FlexOptions;
+  flexGrowXs?: FlexGrowOptions;
+  flexShrinkXs?: FlexShrinkOptions;
+  orderXs?: OrderOptions;
+  justifyContentXs?: JustifyContentOptions;
+  alignContentXs?: AlignContentOptions;
+  alignItemsXs?: AlignItemsOptions;
+  alignSelfXs?: AlignSelfOptions;
+  mtXs?: SpacingOptions;
+  mrXs?: SpacingOptions;
+  mbXs?: SpacingOptions;
+  mlXs?: SpacingOptions;
+  ptXs?: SpacingOptions;
+  prXs?: SpacingOptions;
+  pbXs?: SpacingOptions;
+  plXs?: SpacingOptions;
 }
 
 const Cascadingss = styled.div<CascadingssProps>`
-  width: ${props => props.col ? col[props.col] : undefined};
+  width: ${props => props.w ? w[props.w] : undefined};
+  height: ${props => props.h ? h[props.h] : undefined};
   display: ${props => props.display ? display[props.display] : 'flex'};
   visibility: ${props => props.visibility ? visibility[props.visibility] : undefined};
   flex-direction: ${props => props.flexDirection ? flexDirection[props.flexDirection] : undefined};
@@ -214,8 +224,9 @@ const Cascadingss = styled.div<CascadingssProps>`
   padding-left: ${props => props.pl ? spacing[props.pl] : undefined};
 
   ${(props) => (props.theme.breakpoints.selected === 'mobile' || props.theme.breakpoints.selected === undefined) && css<CascadingssProps>`
-    @media (max-width: ${props => props.theme.breakpoints.mobileFirst.sm ? props.theme.breakpoints.mobileFirst.sm : mobileFirstBreakpoints.sm}) {
-      width: ${props => props.colSm ? col[props.colSm] : undefined};
+    @media (min-width: ${props => props.theme.breakpoints.mobileFirst.sm ? props.theme.breakpoints.mobileFirst.sm : mobileFirstBreakpoints.sm}) {
+      width: ${props => props.wSm ? w[props.wSm] : undefined};
+      height: ${props => props.hSm ? h[props.hSm] : undefined};
       display: ${props => props.displaySm ? display[props.displaySm] : undefined};
       visibility: ${props => props.visibilitySm ? visibility[props.visibilitySm] : undefined};
       flex-direction: ${props => props.flexDirectionSm ? flexDirection[props.flexDirectionSm] : undefined};
@@ -238,8 +249,9 @@ const Cascadingss = styled.div<CascadingssProps>`
       padding-left: ${props => props.plSm ? spacing[props.plSm] : undefined};
     }
 
-    @media (max-width: ${props => props.theme.breakpoints.mobileFirst.md ? props.theme.breakpoints.mobileFirst.md : mobileFirstBreakpoints.md}) {
-      width: ${props => props.colMd ? col[props.colMd] : undefined};
+    @media (min-width: ${props => props.theme.breakpoints.mobileFirst.md ? props.theme.breakpoints.mobileFirst.md : mobileFirstBreakpoints.md}) {
+      width: ${props => props.wMd ? w[props.wMd] : undefined};
+      height: ${props => props.hMd ? h[props.hMd] : undefined};
       display: ${props => props.displayMd ? display[props.displayMd] : undefined};
       visibility: ${props => props.visibilityMd ? visibility[props.visibilityMd] : undefined};
       flex-direction: ${props => props.flexDirectionMd ? flexDirection[props.flexDirectionMd] : undefined};
@@ -262,8 +274,9 @@ const Cascadingss = styled.div<CascadingssProps>`
       padding-left: ${props => props.plMd ? spacing[props.plMd] : undefined};
     }
 
-    @media (max-width: ${props => props.theme.breakpoints.mobileFirst.lg ? props.theme.breakpoints.mobileFirst.lg : mobileFirstBreakpoints.lg}) {
-      width: ${props => props.colLg ? col[props.colLg] : undefined};
+    @media (min-width: ${props => props.theme.breakpoints.mobileFirst.lg ? props.theme.breakpoints.mobileFirst.lg : mobileFirstBreakpoints.lg}) {
+      width: ${props => props.wLg ? w[props.wLg] : undefined};
+      height: ${props => props.hLg ? h[props.hLg] : undefined};
       display: ${props => props.displayLg ? display[props.displayLg] : undefined};
       visibility: ${props => props.visibilityLg ? visibility[props.visibilityLg] : undefined};
       flex-direction: ${props => props.flexDirectionLg ? flexDirection[props.flexDirectionLg] : undefined};
@@ -286,8 +299,9 @@ const Cascadingss = styled.div<CascadingssProps>`
       padding-left: ${props => props.plLg ? spacing[props.plLg] : undefined};
     }
 
-    @media (max-width: ${props => props.theme.breakpoints.mobileFirst.xl ? props.theme.breakpoints.mobileFirst.xl : mobileFirstBreakpoints.xl}) {
-      width: ${props => props.colXl ? col[props.colXl] : undefined};
+    @media (min-width: ${props => props.theme.breakpoints.mobileFirst.xl ? props.theme.breakpoints.mobileFirst.xl : mobileFirstBreakpoints.xl}) {
+      width: ${props => props.wXl ? w[props.wXl] : undefined};
+      height: ${props => props.hXl ? h[props.hXl] : undefined};
       display: ${props => props.displayXl ? display[props.displayXl] : undefined};
       visibility: ${props => props.visibilityXl ? visibility[props.visibilityXl] : undefined};
       flex-direction: ${props => props.flexDirectionXl ? flexDirection[props.flexDirectionXl] : undefined};
@@ -310,8 +324,9 @@ const Cascadingss = styled.div<CascadingssProps>`
       padding-left: ${props => props.plXl ? spacing[props.plXl] : undefined};
     }
 
-    @media (max-width: ${props => props.theme.breakpoints.mobileFirst['2xl'] ? props.theme.breakpoints.mobileFirst['2xl'] : mobileFirstBreakpoints['2xl']}) {
-      width: ${props => props.col2xl ? col[props.col2xl] : undefined};
+    @media (min-width: ${props => props.theme.breakpoints.mobileFirst['2xl'] ? props.theme.breakpoints.mobileFirst['2xl'] : mobileFirstBreakpoints['2xl']}) {
+      width: ${props => props.w2xl ? w[props.w2xl] : undefined};
+      height: ${props => props.h2xl ? h[props.h2xl] : undefined};
       display: ${props => props.display2xl ? display[props.display2xl] : undefined};
       visibility: ${props => props.visibility2xl ? visibility[props.visibility2xl] : undefined};
       flex-direction: ${props => props.flexDirection2xl ? flexDirection[props.flexDirection2xl] : undefined};
@@ -337,7 +352,8 @@ const Cascadingss = styled.div<CascadingssProps>`
 
   ${(props) => (props.theme.breakpoints.selected === 'desktop') && css<CascadingssProps>`
     @media (max-width: ${props => props.theme.breakpoints.desktopFirst.xl ? props.theme.breakpoints.desktopFirst.xl : desktopFirstBreakpoints.xl}) {
-      width: ${props => props.colXl ? col[props.colXl] : undefined};
+      width: ${props => props.wXl ? w[props.wXl] : undefined};
+      height: ${props => props.hXl ? h[props.hXl] : undefined};
       display: ${props => props.displayXl ? display[props.displayXl] : undefined};
       visibility: ${props => props.visibilityXl ? visibility[props.visibilityXl] : undefined};
       flex-direction: ${props => props.flexDirectionXl ? flexDirection[props.flexDirectionXl] : undefined};
@@ -361,7 +377,8 @@ const Cascadingss = styled.div<CascadingssProps>`
     }
 
     @media (max-width: ${props => props.theme.breakpoints.desktopFirst.lg ? props.theme.breakpoints.desktopFirst.lg : desktopFirstBreakpoints.lg}) {
-      width: ${props => props.colLg ? col[props.colLg] : undefined};
+      width: ${props => props.wLg ? w[props.wLg] : undefined};
+      height: ${props => props.hLg ? h[props.hLg] : undefined};
       display: ${props => props.displayLg ? display[props.displayLg] : undefined};
       visibility: ${props => props.visibilityLg ? visibility[props.visibilityLg] : undefined};
       flex-direction: ${props => props.flexDirectionLg ? flexDirection[props.flexDirectionLg] : undefined};
@@ -385,7 +402,8 @@ const Cascadingss = styled.div<CascadingssProps>`
     }
 
     @media (max-width: ${props => props.theme.breakpoints.desktopFirst.md ? props.theme.breakpoints.desktopFirst.md : desktopFirstBreakpoints.md}) {
-      width: ${props => props.colMd ? col[props.colMd] : undefined};
+      width: ${props => props.wMd ? w[props.wMd] : undefined};
+      height: ${props => props.hMd ? h[props.hMd] : undefined};
       display: ${props => props.displayMd ? display[props.displayMd] : undefined};
       visibility: ${props => props.visibilityMd ? visibility[props.visibilityMd] : undefined};
       flex-direction: ${props => props.flexDirectionMd ? flexDirection[props.flexDirectionMd] : undefined};
@@ -409,7 +427,8 @@ const Cascadingss = styled.div<CascadingssProps>`
     }
 
     @media (max-width: ${props => props.theme.breakpoints.desktopFirst.sm ? props.theme.breakpoints.desktopFirst.sm : desktopFirstBreakpoints.sm}) {
-      width: ${props => props.colSm ? col[props.colSm] : undefined};
+      width: ${props => props.wSm ? w[props.wSm] : undefined};
+      height: ${props => props.hSm ? h[props.hSm] : undefined};
       display: ${props => props.displaySm ? display[props.displaySm] : undefined};
       visibility: ${props => props.visibilitySm ? visibility[props.visibilitySm] : undefined};
       flex-direction: ${props => props.flexDirectionSm ? flexDirection[props.flexDirectionSm] : undefined};
@@ -433,7 +452,8 @@ const Cascadingss = styled.div<CascadingssProps>`
     }
 
     @media (max-width: ${props => props.theme.breakpoints.desktopFirst.xs ? props.theme.breakpoints.desktopFirst.xs : desktopFirstBreakpoints.xs}) {
-      width: ${props => props.colXs ? col[props.colXs] : undefined};
+      width: ${props => props.wXs ? w[props.wXs] : undefined};
+      height: ${props => props.hXs ? h[props.hXs] : undefined};
       display: ${props => props.displayXs ? display[props.displayXs] : undefined};
       visibility: ${props => props.visibilityXs ? visibility[props.visibilityXs] : undefined};
       flex-direction: ${props => props.flexDirectionXs ? flexDirection[props.flexDirectionXs] : undefined};
